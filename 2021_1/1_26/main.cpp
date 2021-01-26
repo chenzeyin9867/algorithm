@@ -47,12 +47,12 @@ public:
             if(l1){
                 a = l1->val;   
                 l1 = l1->next; 
-                cout << a;
+                //cout << a;
             }
             if(l2){
                 b = l2->val;
                 l2 = l2->next;
-                cout << b;
+                //cout << b;
             }
             //cout << endl;
             //cout << "a + b + prev" <<  (a + b + prev) << endl;
@@ -62,6 +62,10 @@ public:
             result->next = cur;
             result = cur;
             prev = (a + b + prev) / 10;
+        }
+        if(prev != 0){
+            ListNode *cur = new ListNode(prev);
+            result->next = cur;
         }
         // result->val = r.top();
         // r.pop();
