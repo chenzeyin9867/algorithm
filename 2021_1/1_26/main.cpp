@@ -27,46 +27,53 @@ public:
         std::stack <int> s1;
         std::stack <int> s2; 
         ListNode *head = l1;
-        while(head){
-            s1.push(head->val);
-            head = head->next;
-        }
-        head = l2;
-        while(head){
-            s2.push(head->val);
-            head = head->next;
-        }
-        ListNode *result = (ListNode*)malloc(sizeof(struct ListNode));
+        // while(head){
+        //     s1.push(head->val);
+        //     head = head->next;
+        // }
+        // head = l2;
+        // while(head){
+        //     s2.push(head->val);
+        //     head = head->next;
+        // }
+        ListNode *result = new ListNode();
         ListNode *ret = result;
         stack<int> r;
         int prev = 0;
-        while(!s1.empty() || !s2.empty()){
+        while(l1 || l2){
             int a = 0;
             int b = 0;
 
-            if(!s1.empty()){
-                a = s1.top();   
-                s1.pop(); 
+            if(l1){
+                a = l1->val;   
+                l1 = l1->next; 
+                cout << a;
             }
-            if(!s2.empty()){
-                b = s2.top();
-                s2.pop();
+            if(l2){
+                b = l2->val;
+                l2 = l2->next;
+                cout << b;
             }
-            r.push((a + b + prev)%10);
-            prev = (a + b + prev) / 10;
-            cout << "a + b + prev" <<  (a + b + prev) << endl;
-        }
-        result->val = r.top();
-        r.pop();
-        while(!r.empty()){
-            ListNode * cur =(ListNode*)malloc(sizeof(struct ListNode));
-            cur->val = r.top();
+            //cout << endl;
+            //cout << "a + b + prev" <<  (a + b + prev) << endl;
+            ListNode * cur = new ListNode();
+            cur->val = (a + b + prev) % 10;
             cur->next = nullptr;
-            r.pop();
             result->next = cur;
             result = cur;
+            prev = (a + b + prev) / 10;
         }
-        return ret;
+        // result->val = r.top();
+        // r.pop();
+        // while(!r.empty()){
+        //     ListNode * cur = new ListNode();
+        //     cur->val = r.top();
+        //     cur->next = nullptr;
+        //     r.pop();
+        //     result->next = cur;
+        //     result = cur;
+        // }
+        return ret->next;
     }
 };
 
@@ -84,10 +91,10 @@ int main(){
     x2.next = &x3;
     y1.next = &y2;
     y2.next = &y3;
-    ListNode * result = s.addTwoNumbers(&x1, &x2);
-    // while(result){
-    //     cout << result->val << " ";
-    //     result = result ->next;
-    // }
+    ListNode * result = s.addTwoNumbers(&x1, &y1);
+    while(result){
+        cout << result->val << " ";
+        result = result ->next;
+    }
     return 0;
 }
