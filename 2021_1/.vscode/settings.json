@@ -1,0 +1,25 @@
+{
+    "files.associations": {
+        "iostream": "cpp",
+        "cmath": "cpp",
+        "cstdio": "cpp",
+        "cstdlib": "cpp",
+        "deque": "cpp",
+        "ios": "cpp",
+        "istream": "cpp",
+        "ostream": "cpp",
+        "stack": "cpp",
+        "streambuf": "cpp",
+        "xiosbase": "cpp",
+        "xlocnum": "cpp",
+        "xmemory": "cpp",
+        "xtr1common": "cpp",
+        "cstdint": "cpp",
+        "limits": "cpp",
+        "new": "cpp",
+        "xutility": "cpp",
+        "xstring": "cpp",
+        "xtree": "cpp",
+        "map": "cpp"
+    }
+}

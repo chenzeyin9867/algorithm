@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/56224/Desktop/MyWorkSpace/algorithm/2021_1/1_27_new/main.cpp
+iostream
+-
+set
+-
+map
+-
+
