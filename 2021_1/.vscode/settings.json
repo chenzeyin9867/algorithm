@@ -20,6 +20,7 @@
         "xutility": "cpp",
         "xstring": "cpp",
         "xtree": "cpp",
-        "map": "cpp"
+        "map": "cpp",
+        "string": "cpp"
     }
 }

@@ -8,7 +8,7 @@
             "name": "g++.exe - 生成和调试活动文件",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceFolder}/1_30/reverse_num",
+            "program": "${workspaceFolder}/2_1/myAtoi.exe",
             "args": [],
             "stopAtEntry": false,
             "cwd": "C:\\MinGW\\bin",
