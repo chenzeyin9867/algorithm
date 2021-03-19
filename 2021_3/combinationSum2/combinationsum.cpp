@@ -3,37 +3,43 @@
 #include <algorithm>
 #include <numeric>
 using namespace std;
-class Solution {
-public:
-    vector<vector<int>> combinationSum2(vector<int>& candidates, int target) {
-        sort(candidates.begin(), candidates.end()); // sort the vector first for the  pruning
-        vector <vector <int> > result;
-        vector<int>cur_list;
-        dfs(candidates, cur_list, result, target);
-        return result;
-    }
+// author:rmokerone
+#include <iostream>
+#include <vector>
 
-    void dfs(vector<int>& candidates, vector<int>&cur_list, vector<vector<int>> &final_result, int target){
-        int sum = accumulate(cur_list.begin(), cur_list.end(), 0);
-        if(sum == target){
-            final_result.push_back(cur_list);
-        }else{
-            if(sum > target){
-                return;
-            }
-            if(candidates.size() == 0){
-                return;
-            }
-            vector<int> tmp(candidates.begin() + 1, candidates.end());
-            cur_list.push_back(candidates[0]);
-            dfs(tmp, cur_list,final_result, target);
-            cur_list.pop_back();
-            dfs(tmp, cur_list, final_result, target);
+using namespace std;
+
+class Solution {
+
+private:
+    vector<int> candidates;
+    vector<vector<int>> res;
+    vector<int> path;
+public:
+    void DFS(int start, int target) {
+        if (target == 0) {
+            res.push_back(path);
+            return;
         }
 
-        
+        for (int i = start; i < candidates.size() && target - candidates[i] >= 0; i++) {
+            if (i > start && candidates[i] == candidates[i - 1])
+                continue;
+            path.push_back(candidates[i]);
+            // 元素不可重复利用，使用下一个即i+1
+            DFS(i + 1, target - candidates[i]);
+            path.pop_back();
+        }
+    }
+
+    vector<vector<int>> combinationSum2(vector<int> &candidates, int target) {
+        sort(candidates.begin(), candidates.end());
+        this->candidates = candidates;
+        DFS(0, target);
+        return res;
     }
 };
+
 int main(){
     Solution s;
 
