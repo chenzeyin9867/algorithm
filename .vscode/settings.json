@@ -37,7 +37,16 @@
         "xtr1common": "cpp",
         "xutility": "cpp",
         "stack": "cpp",
-        "string": "cpp"
+        "string": "cpp",
+        "algorithm": "cpp",
+        "atomic": "cpp",
+        "bit": "cpp",
+        "cctype": "cpp",
+        "clocale": "cpp",
+        "compare": "cpp",
+        "ctime": "cpp",
+        "iterator": "cpp",
+        "vector": "cpp"
     },
     "python.pythonPath": "C:\\Users\\56224\\Anaconda3\\python.exe"
 }
