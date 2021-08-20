@@ -9,5 +9,16 @@
 #include <set>
 #include <memory>
 #include <algorithm>
+#include <stack>
 using namespace std;
+
+
+
+inline void printVector(vector<int> & v){
+    for(auto i : v){
+        cout << i << " ";
+    }
+    cout << endl;
+}
+
 #endif
