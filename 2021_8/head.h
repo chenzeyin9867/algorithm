@@ -10,6 +10,7 @@
 #include <memory>
 #include <algorithm>
 #include <stack>
+#include <math.h>
 using namespace std;
 struct ListNode {
       int val;
@@ -34,5 +35,13 @@ inline void printVector(vector<int> & v){
     }
     cout << endl;
 }
+
+template <class T>
+    void swap(T &x, T &y){
+        T temp;
+        temp = x;
+        x = y;
+        y = temp;
+    }
 
 #endif
