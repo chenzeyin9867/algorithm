@@ -11,6 +11,7 @@
 #include <algorithm>
 #include <stack>
 #include <math.h>
+#include <queue>
 using namespace std;
 struct ListNode {
       int val;
@@ -28,8 +29,8 @@ struct ListNode {
     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
 };
 
-
-inline void printVector(vector<int> & v){
+template <class T>
+inline void printVector(vector<T> & v){
     for(auto i : v){
         cout << i << " ";
     }
