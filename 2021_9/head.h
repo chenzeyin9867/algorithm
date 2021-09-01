@@ -35,7 +35,7 @@ struct ListNode {
 };
 
 template <class T>
-inline void printVector(vector<T> & v){
+inline void printVector(vector<T>  v){
     for(auto i : v){
         cout << i << " ";
     }
