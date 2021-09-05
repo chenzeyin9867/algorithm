@@ -2,6 +2,7 @@
 #ifndef HEAD_H
 #define HEAD_H
 
+#include <math.h>
 #include <iostream>
 #include <vector>
 #include <string>
