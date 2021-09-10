@@ -38,17 +38,17 @@ struct ListNode {
 template <class T>
 inline void printVector(vector<T>  v){
     for(auto i : v){
-        cout << i << " ";
+        cout << i << endl;
     }
     cout << endl;
 }
 
-template <class T>
-    void swap(T &x, T &y){
-        T temp;
-        temp = x;
-        x = y;
-        y = temp;
-    }
+// template <class T>
+//     void swap(T &x, T &y){
+//         T temp;
+//         temp = x;
+//         x = y;
+//         y = temp;
+//     }
 
 #endif
