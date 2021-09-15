@@ -41,9 +41,15 @@ public:
     }
 };
 
+// int main(){
+//     Solution s;
+//     vector<string> dic{ "ale","apple","monkey","plea"};
+//     cout << s.findLongestWord("abpcplea", dic) << endl;
+//     return 0;
+// }
 int main(){
-    Solution s;
-    vector<string> dic{ "ale","apple","monkey","plea"};
-    cout << s.findLongestWord("abpcplea", dic) << endl;
+    vector<int> s{1,2};
+    size_t a = s.size();
+    cout << (a < -1) << endl;
     return 0;
 }
