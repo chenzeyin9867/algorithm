@@ -60,7 +60,7 @@ public:
 template <class T>
 inline void printVector(vector<T>  v){
     for(auto i : v){
-        cout << i << endl;
+        cout << i << " ";
     }
     cout << endl;
 }
