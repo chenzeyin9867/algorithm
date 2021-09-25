@@ -56,6 +56,16 @@ public:
 };
 
 
+// Definition for Employee.
+class Employee {
+public:
+    int id;
+    int importance;
+    vector<int> subordinates;
+};
+
+
+
 
 template <class T>
 inline void printVector(vector<T>  v){
