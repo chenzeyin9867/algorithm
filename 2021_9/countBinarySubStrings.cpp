@@ -4,19 +4,27 @@ public:
     int countBinarySubstrings(string s) {
         vector<int> counts;
         int ptr = 0, n = s.size();
-        while (ptr < n) {
-            char c = s[ptr];
-            int count = 0;
-            while (ptr < n && s[ptr] == c) {
-                ++ptr;
-                ++count;
+        int cnt = 0;
+        for(int i = 0; i < s.size(); ++i){
+            if(i == 0){
+                ptr = s[i];
+                cnt = 1;
+            }else{
+                if(s[i] == ptr){
+                    ++cnt;
+                }else{
+                    counts.emplace_back(cnt);
+                    cnt = 1;
+                    ptr = s[i];
+                }
             }
-            counts.push_back(count);
         }
-        int ans = 0;
-        for (int i = 1; i < counts.size(); ++i) {
-            ans += min(counts[i], counts[i - 1]);
+        cout << "end" << endl;
+        if(counts.size() <= 1) return 0;
+        int sum = 0;
+        for(int i = 0; i < counts.size() - 1; ++i){
+            sum += std::min(counts[i], counts[i+1]);
         }
-        return ans;
+        return sum;
     }
 };
