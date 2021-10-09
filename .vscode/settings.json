@@ -46,7 +46,20 @@
         "compare": "cpp",
         "ctime": "cpp",
         "iterator": "cpp",
-        "vector": "cpp"
+        "vector": "cpp",
+        "queue": "cpp",
+        "unordered_map": "cpp",
+        "deque": "cpp",
+        "list": "cpp",
+        "map": "cpp",
+        "set": "cpp",
+        "hash_map": "cpp",
+        "hash_set": "cpp",
+        "numeric": "cpp",
+        "sstream": "cpp",
+        "unordered_set": "cpp",
+        "xhash": "cpp",
+        "xtree": "cpp"
     },
     "python.pythonPath": "C:\\Users\\56224\\Anaconda3\\python.exe"
 }

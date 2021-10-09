@@ -22,8 +22,8 @@ class Solution(object):
         return ret
 
 
+import numpy as np
 
-        
 s = Solution()
 root = TreeNode(val=1, right=TreeNode(val=2, left=TreeNode(val=3)))
 # root = None
