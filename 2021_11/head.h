@@ -19,6 +19,7 @@
 #include <unordered_set>
 #include <hash_set>
 #include <hash_map>
+#include <numeric>
 
 using namespace std;
 struct ListNode {
