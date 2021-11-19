@@ -1,6 +1,6 @@
 #include "head.h"
 /**
- * @brief use dynamic programing
+ * @brief use recursive
  * 
  */
 class Solution {

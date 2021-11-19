@@ -20,7 +20,7 @@
 #include <hash_set>
 #include <hash_map>
 #include <numeric>
-
+#include <list>
 using namespace std;
 struct ListNode {
       int val;
