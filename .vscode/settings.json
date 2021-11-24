@@ -59,7 +59,8 @@
         "sstream": "cpp",
         "unordered_set": "cpp",
         "xhash": "cpp",
-        "xtree": "cpp"
+        "xtree": "cpp",
+        "random": "cpp"
     },
     "python.pythonPath": "C:\\Users\\56224\\Anaconda3\\python.exe"
 }
