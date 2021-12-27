@@ -53,3 +53,31 @@ public:
         return dummyHead;
     }
 };
+
+class Solution {
+public:
+    Node* prev = nullptr, *cur;
+    Node* dummyHead = nullptr;
+    Node* treeToDoublyList(Node* root) {
+        if(!root) return root;
+        cur = root;
+        dfs(cur); // last element
+        prev ->right = dummyHead;
+        dummyHead -> left = prev;
+        return dummyHead;
+    }
+
+    void dfs(Node* node){
+        if(!node) return;
+        // dfs its left child
+        dfs(node->left);
+        if(!prev){
+            dummyHead = node;
+        }else{
+            prev->right = node;
+            node->left = prev;
+        }
+        prev = node;
+        dfs(node->right);
+    }
+};
