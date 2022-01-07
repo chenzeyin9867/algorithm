@@ -60,7 +60,10 @@
         "unordered_set": "cpp",
         "xhash": "cpp",
         "xtree": "cpp",
-        "random": "cpp"
+        "random": "cpp",
+        "array": "cpp",
+        "string_view": "cpp",
+        "regex": "cpp"
     },
     "python.pythonPath": "C:\\Users\\56224\\Anaconda3\\python.exe"
 }
